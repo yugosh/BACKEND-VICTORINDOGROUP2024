@@ -78,10 +78,12 @@ app.use('/login', async (req, res) => {
                 const payload = {
                     username: dataUserCheck.username,
                     role: dataUserCheck.role,
-                    document_id: dataUserCheck.document_id
+                    document_id: dataUserCheck.document_id,
+                    token : dataUserCheck.token,
                 };
 
-                const token = jwt.sign(payload, JWT_SECRET_TOKEN);
+                // const token = jwt.sign(payload, JWT_SECRET_TOKEN);
+                const token = jwt.sign(payload, JWT_SECRET_TOKEN, { expiresIn: '1d' });
                 dataUserCheck['token'] = token;
 
                 //=======================
