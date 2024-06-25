@@ -20,7 +20,7 @@ const document_log = db.document_log;
 
 const JWT_SECRET_TOKEN = process.env.JWT_SECRET_TOKEN;
 
-const allowedIPs = ['http://localhost:4200', 'http://localhost:4201', 'https://cloud.mongodb.com'];
+const allowedIPs = ['http://localhost:4200', 'http://localhost:4201', 'https://cloud.mongodb.com', 'https://victorindogroup.yugosh.dev', 'https://vercel.app'];
 
 db.mongoose.set('strictQuery', false);
 
